@@ -22,7 +22,6 @@ public class Main {
         
         PriorityQueue<Paciente> queue = new PriorityQueue<Paciente> ();
         Scanner scan = new Scanner(System.in);
-        Paciente pacient= new Paciente();
         VectorHeap<Paciente> heap= new VectorHeap<Paciente>();
         
         String nombre=" ";
@@ -34,23 +33,25 @@ public class Main {
         String s="";
         int op=0;
         
-        String pacientes= null;
+      String pacientes= null;
       FileReader fileReader = new FileReader("C:\\Users\\bff_n_000\\Desktop\\pacientes.txt");
       BufferedReader doc = new BufferedReader(fileReader);  
       while((pacientes = doc.readLine()) != null) {
       
       
-      nombre= pacientes.substring(0, pos1=pacientes.indexOf(","));
-      p=pacientes.replaceFirst(nombre, " ");
-      s=p.replaceFirst(",", " ");
-      sintoma=p.substring(p.indexOf(" ")+3, s.indexOf(",") );
-      pos2=pacientes.replaceFirst(",", "");
-      prioridad=pacientes.substring(pos2.indexOf(",")+2,pacientes.length());
-      
-      
-      pacient.setNombre(nombre);
-      pacient.setSintoma(sintoma);
-      pacient.setPrioridad(prioridad);
+        nombre= pacientes.substring(0, pos1=pacientes.indexOf(","));
+        p=pacientes.replaceFirst(nombre, " ");
+        s=p.replaceFirst(",", " ");
+        sintoma=p.substring(p.indexOf(" ")+3, s.indexOf(",") );
+        pos2=pacientes.replaceFirst(",", "");
+        prioridad=pacientes.substring(pos2.indexOf(",")+2,pacientes.length());
+        Paciente pacient= new Paciente();
+           pacient.setNombre(nombre);
+           pacient.setSintoma(sintoma);
+           pacient.setPrioridad(prioridad);
+           heap.add(pacient);
+           System.out.println (heap.toString());
+     /*
       //System.out.println (sintoma);
        System.out.println ("-----------------------------------------------------------------");
        System.out.println ("Bienvenido al sistema de emergencias del Hospital");
@@ -62,12 +63,18 @@ public class Main {
        scan.nextLine();
        while(op!=3){
        if (op==1){
+           Paciente pacient= new Paciente();
+           pacient.setNombre(nombre);
+           pacient.setSintoma(sintoma);
+           pacient.setPrioridad(prioridad);
            heap.add(pacient);
-           System.out.println (heap.getData().elements().toString());
+           System.out.println (heap.toString());
        }
        else if (op==2){
-           queue.add(pacient);
+           Paciente paciente= new Paciente();
+           queue.add(paciente);
            System.out.println (queue.element().getNombre());
+           queue.remove(paciente);
        }
        System.out.println ("Ingrese de que manera desea ordenar la prioridad de emergencia");
        System.out.println ("1. Utilizando la interfaz Priority Queue");
@@ -77,7 +84,7 @@ public class Main {
        scan.nextLine();
        }
       
-     
+     */
       }
     }
     
