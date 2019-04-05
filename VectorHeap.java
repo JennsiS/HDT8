@@ -14,7 +14,20 @@ public class VectorHeap<E extends Comparable<E>> implements Pqueue<E>
     /**
      * Atributo de tipo vector, el cual contiene los pacientes ingresados
      */
-    protected Vector<E> data; // the data, kept in heap order
+    private Vector<E> data; // the data, kept in heap order
+
+    @Override
+    public String toString() {
+        return "VectorHeap{" + "data=" + data + '}';
+    }
+
+    public Vector<E> getData() {
+        return data;
+    }
+
+    public void setData(Vector<E> data) {
+        this.data = data;
+    }
 
     /**
      * Constructor de la clase
@@ -167,7 +180,7 @@ public class VectorHeap<E extends Comparable<E>> implements Pqueue<E>
      */
     @Override
     public E getFirst() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return data.get(0);
     }
 
     /**
@@ -185,7 +198,7 @@ public class VectorHeap<E extends Comparable<E>> implements Pqueue<E>
      */
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return data.size();
     }
 
     /**
