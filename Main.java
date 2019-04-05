@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 /**
  * @author Jennifer Sandoval,Esteban del Valle
- * @Carne 18962,18
+ * @Carne 18962,18221
  * @date 02/04/19
  * @name Main.java
  * <p>Clase principal del programa la cual permite observar la lista de los pacientes en orden de prioridad </p>
