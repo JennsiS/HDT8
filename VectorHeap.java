@@ -3,7 +3,7 @@ import java.util.Vector;
 
 /**
  * @author Jennifer Sandoval,Esteban del Valle
- * @Carne 18962,18221
+ * @Carne 18962,18
  * @date 02/04/19
  * @name VectorHeap.java
  * <p>Clase que permite manejar una cola por medio de un heap, implementando la interfaz de priority queue </p>

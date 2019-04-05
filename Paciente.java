@@ -1,6 +1,6 @@
 /**
  * @author Jennifer Sandoval,Esteban del Valle
- * @Carne 18962,18221
+ * @Carne 18962,18
  * @date 02/04/19
  * @name Paciente.java
  * <p>Clase de tipo paciente  </p>
@@ -38,9 +38,13 @@ public class Paciente implements Comparable <Paciente> {
     
     @Override
     public  int compareTo(Paciente o) {
-        int num=0;
-        num=this.prioridad.compareTo(o.prioridad);
-        return num;
+        return this.prioridad.compareTo(o.prioridad);
+        
+    }
+
+    @Override
+    public String toString() {
+        return "Paciente{" + "nombre=" + nombre + ", sintoma=" + sintoma + ", prioridad=" + prioridad + '}';
     }
     
 }

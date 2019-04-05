@@ -1,6 +1,6 @@
-﻿/**
+/**
  * @author Jennifer Sandoval,Esteban del Valle
- * @Carne 18962,18221
+ * @Carne 18962,18
  * @date 02/04/19
  * @name PriorityQueue.java
  * <p>Interfaz que permite realizar la prioridad de elementos </p>
