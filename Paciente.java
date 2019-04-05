@@ -1,6 +1,6 @@
 /**
  * @author Jennifer Sandoval,Esteban del Valle
- * @Carne 18962,18
+ * @Carne 18962,18221
  * @date 02/04/19
  * @name Paciente.java
  * <p>Clase de tipo paciente  </p>
