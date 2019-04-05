@@ -22,6 +22,8 @@ public class Main {
         
         PriorityQueue<Paciente> queue = new PriorityQueue<Paciente> ();
         Scanner scan = new Scanner(System.in);
+        Paciente pacient= new Paciente();
+        VectorHeap<Paciente> heap= new VectorHeap<Paciente>();
         
         String nombre=" ";
         String sintoma=" ";
@@ -30,7 +32,7 @@ public class Main {
         int pos1=0;
         String p="";
         String s="";
-        String op=" ";
+        int op=0;
         
         String pacientes= null;
       FileReader fileReader = new FileReader("C:\\Users\\bff_n_000\\Desktop\\pacientes.txt");
@@ -44,18 +46,37 @@ public class Main {
       sintoma=p.substring(p.indexOf(" ")+3, s.indexOf(",") );
       pos2=pacientes.replaceFirst(",", "");
       prioridad=pacientes.substring(pos2.indexOf(",")+2,pacientes.length());
+      
+      
+      pacient.setNombre(nombre);
+      pacient.setSintoma(sintoma);
+      pacient.setPrioridad(prioridad);
       //System.out.println (sintoma);
        System.out.println ("-----------------------------------------------------------------");
        System.out.println ("Bienvenido al sistema de emergencias del Hospital");
        System.out.println ("Ingrese de que manera desea ordenar la prioridad de emergencia");
        System.out.println ("1. Utilizando la interfaz Priority Queue");
        System.out.println ("2. Utilizando la interfaz Priority Queue implementada por JFC");
-       op=scan.nextLine();
-       if (op.equals ("1")){
-           
+       System.out.println ("3. Salir");
+       op=scan.nextInt();
+       scan.nextLine();
+       while(op!=3){
+       if (op==1){
+           heap.add(pacient);
+           System.out.println (heap.getData().elements().toString());
        }
-       else if (op.equals("2")){
+       else if (op==2){
+           queue.add(pacient);
+           System.out.println (queue.element().getNombre());
        }
+       System.out.println ("Ingrese de que manera desea ordenar la prioridad de emergencia");
+       System.out.println ("1. Utilizando la interfaz Priority Queue");
+       System.out.println ("2. Utilizando la interfaz Priority Queue implementada por JFC");
+       System.out.println ("3. Salir");
+       op=scan.nextInt();
+       scan.nextLine();
+       }
+      
      
       }
     }
